@@ -47,7 +47,7 @@ export default function Input() {
     setInputValue(value)
   };
   const reset = () => {
-    /* STEP 5 */
+    setInputValue('')
   };
 
   const style = {
@@ -59,9 +59,9 @@ export default function Input() {
   return (
     <div className='container widget-input'>
       <h2>Input</h2>
-      <div id='output' style={style}>{inputValue.toUpperCase()}</div> {/* STEP 3 */}
+      <div id='output' style={style}>{inputValue.toUpperCase()}</div> 
       <div>
-        <input id='input' type='text' onChange={changeInput} /> {/* STEP 6 */}
+        <input id='input' type='text' value={inputValue} onChange={changeInput} /> 
         <button id='resetInput' onClick={reset}>Reset</button>
       </div>
     </div>
